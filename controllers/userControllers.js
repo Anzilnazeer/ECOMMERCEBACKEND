@@ -4,7 +4,7 @@ module.exports = {
     try {
       const user = await User.findById(req.user.id);
       console.log({ user });
-      const { password, __v, createdAt, ...userData } = user;
+      const { password, __v, createdAt, ...userData } = user._doc;
       console.log({ password, __v, createdAt, userData, user });
       res.status(200).json(userData);
     } catch (error) {

@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const productController = require("../controllers/productControllers");
-router.get("//", productController.getAllProducts);
+router.get("/getProducts", productController.getAllProducts);
 router.get("/:id", productController.getProduct);
 router.get("/search/:key", productController.searchProduct);
 router.post("/", productController.createProduct);
